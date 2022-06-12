@@ -72,7 +72,16 @@ awk，必须 外层单引号 ， 内层双引号
 	awk '{print "第一列:"$1,"第一列:"$2}' luffy.txt
 	
 
+#输出整行信息
+	awk '{print}' luffy.txt
+	awk '{print $0}' luffy.txt
+	
 
+#输出第五行信息
+	awk 'NR==5{print $0}' luffy.txt
+	
+#给每一行添加上行号
+	awk '{print NR,$0}' luffy.txt   #实现了cat -n  一样的效果
 
 ```
 
